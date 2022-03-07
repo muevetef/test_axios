@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Test de la api contactos con axios</h1>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      //   axios("https://aeuiou.herokuapp.com/api/login", {
+      //     method: "post",
+      //     data: { email: "gato@gmail.com", password: "123456" },
+      //     headers: {
+      //       Accept: "application/json",
+      //       "Content-Type": "application/json",
+      //     },
+      //   })
+      //     .then((res) => console.log(res.data.token))
+      //     .catch((err) => console.log(err.response.data));
+
+      axios
+        .post("https://aeuiou.herokuapp.com/api/login", {
+          email: "gato@gmail.com",
+          password: "12356",
+        })
+        .then((res) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error.response.data);
+        });
+    </script>
+  </body>
 </html>
